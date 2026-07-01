@@ -86,9 +86,15 @@
     const list = $('#card-list')
     const display = $('#date-display')
     const nextBtn = $('#next-day')
+    const rateText = $('#rate-text')
+    const rateFill = $('#rate-fill')
 
     display.textContent = isToday(state.currentDate) ? 'Today' : formatDate(state.currentDate)
     nextBtn.disabled = isToday(state.currentDate)
+
+    const done = wins.filter(w => w.done).length
+    rateText.textContent = wins.length ? `${done}/${wins.length} done` : '0/0 done'
+    rateFill.style.width = wins.length ? `${(done / wins.length) * 100}%` : '0%'
 
     if (wins.length === 0) {
       list.innerHTML = `

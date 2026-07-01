@@ -75,6 +75,36 @@ h1 {
   padding: 4px 0;
 }
 
+#win-rate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 4px;
+}
+
+#rate-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.rate-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#rate-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
 #date-display {
   font-size: 15px;
   font-weight: 600;
@@ -171,7 +201,6 @@ h1 {
 }
 
 .win-card.done .win-title {
-  text-decoration: line-through;
   color: var(--text-muted);
 }
 
