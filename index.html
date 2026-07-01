@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#5b8def">
+  <meta name="description" content="Track your small daily wins">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <title>Small Wins</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>small wins</h1>
+      <nav id="date-nav">
+        <button id="prev-day" class="nav-btn" aria-label="Previous day">‹</button>
+        <span id="date-display">Today</span>
+        <button id="next-day" class="nav-btn" aria-label="Next day">›</button>
+      </nav>
+    </header>
+
+    <main id="card-list">
+      <!-- Cards rendered by JS -->
+    </main>
+
+    <button id="fab" class="fab" aria-label="Add new win">+</button>
+  </div>
+
+  <div id="modal-overlay" class="hidden">
+    <div id="bottom-sheet">
+      <div class="sheet-header">
+        <button id="cancel-btn" class="text-btn">Cancel</button>
+        <h2>New Win</h2>
+        <button id="save-btn" class="text-btn primary">Save</button>
+      </div>
+      <div class="sheet-body">
+        <div class="input-group">
+          <label for="win-emoji">Emoji</label>
+          <input type="text" id="win-emoji" placeholder="🌟" maxlength="4" autocomplete="off">
+          <div class="emoji-grid" id="emoji-grid">
+            <button class="emoji-opt" data-emoji="🌟">🌟</button>
+            <button class="emoji-opt" data-emoji="💪">💪</button>
+            <button class="emoji-opt" data-emoji="🎉">🎉</button>
+            <button class="emoji-opt" data-emoji="🙌">🙌</button>
+            <button class="emoji-opt" data-emoji="✨">✨</button>
+            <button class="emoji-opt" data-emoji="🔥">🔥</button>
+            <button class="emoji-opt" data-emoji="💡">💡</button>
+            <button class="emoji-opt" data-emoji="✅">✅</button>
+            <button class="emoji-opt" data-emoji="🏆">🏆</button>
+            <button class="emoji-opt" data-emoji="🎯">🎯</button>
+            <button class="emoji-opt" data-emoji="💖">💖</button>
+            <button class="emoji-opt" data-emoji="🚀">🚀</button>
+            <button class="emoji-opt" data-emoji="🌱">🌱</button>
+            <button class="emoji-opt" data-emoji="🫶">🫶</button>
+            <button class="emoji-opt" data-emoji="☀️">☀️</button>
+            <button class="emoji-opt" data-emoji="🎨">🎨</button>
+            <button class="emoji-opt" data-emoji="📚">📚</button>
+            <button class="emoji-opt" data-emoji="🧘">🧘</button>
+            <button class="emoji-opt" data-emoji="🏃">🏃</button>
+            <button class="emoji-opt" data-emoji="🎵">🎵</button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="win-title">Title</label>
+          <input type="text" id="win-title" placeholder="What did you achieve?" autocomplete="off">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
